@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Login to Your Account</h2>
+    </div>
+    <div class="card-content">
+      <form class="form">
+        <div class="form-group">
+          <label for="email" class="label">Email</label>
+          <input
+            name="email"
+            id="email"
+            type="email"
+            class="input"
+            placeholder="Enter your email"
+            [(ngModel)]="userLogin.email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password" class="label">Password</label>
+          <input
+            name="password"
+            id="password"
+            type="password"
+            class="input"
+            placeholder="Enter your password"
+            [(ngModel)]="userLogin.password"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">
+      <button class="button" (click)="onSubmit()">Log In</button>
+    </div>
+    <div>
+      <p style="color: black">
+        Don't have an account? <a routerLink="/register">Register Here</a>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,5 @@
-<h1>Radix Sort</h1>
-<router-outlet></router-outlet>
+<router-outlet>
+  <div *ngIf="shouldShowLayout()">
+    <app-navigation></app-navigation>
+  </div>
+</router-outlet>
