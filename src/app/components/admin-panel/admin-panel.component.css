@@ -1,0 +1,81 @@
+/* Osnovni stilovi */
+body {
+  min-height: 100vh;
+  background-color: #ffffff; /* bg-gray-100 */
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+/* Header */
+header {
+  /* Stil za Header komponentu možeš dodati ovdje */
+}
+
+/* Glavni sadržaj */
+main {
+  max-width: 1200px; /* container */
+  margin: 0 auto; /* mx-auto */
+  padding: 2rem 1.5rem; /* px-6 py-8 */
+}
+
+main h1 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: bold; /* font-bold */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* Kontejner za tabelu */
+table {
+  width: 100%; /* min-w-full */
+  border-collapse: collapse; /* Stil za izgled */
+  background-color: #ffffff; /* bg-white */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow */
+  overflow: hidden; /* overflow-hidden */
+}
+
+thead {
+  background-color: #f9fafb; /* bg-gray-50 */
+}
+
+thead th {
+  padding: 0.75rem 1.5rem; /* px-6 py-3 */
+  text-align: left; /* text-left */
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 500; /* font-medium */
+  text-transform: uppercase; /* uppercase */
+  color: #6b7280; /* text-gray-500 */
+  letter-spacing: 0.05em; /* tracking-wider */
+}
+
+tbody {
+  background-color: #ffffff; /* bg-white */
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb; /* divide-gray-200 */
+}
+
+tbody td {
+  padding: 0.75rem 1.5rem; /* px-6 py-4 */
+  white-space: nowrap; /* whitespace-nowrap */
+}
+
+tbody button {
+  background: none; /* Bez pozadine */
+  border: none; /* Bez okvira */
+  color: #4f46e5; /* text-indigo-600 */
+  cursor: pointer;
+}
+
+tbody button:hover {
+  color: #4338ca; /* hover:text-indigo-900 */
+}
+
+tbody button.text-red-600 {
+  color: #dc2626; /* text-red-600 */
+}
+
+tbody button.text-red-600:hover {
+  color: #b91c1c; /* hover:text-red-900 */
+}

@@ -1,0 +1,76 @@
+header {
+  background-color: #ffffff; /* bg-white */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+a {
+  color: black;
+}
+
+nav {
+  max-width: 1200px; /* container */
+  margin: 0 auto; /* mx-auto */
+  padding: 1rem 1rem; /* px-4 py-4 */
+  display: flex;
+  justify-content: space-between; /* justify-between */
+  align-items: center; /* items-center */
+}
+
+nav a {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: bold; /* font-bold */
+  text-decoration: none; /* Link stil */
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem; /* space-x-4 */
+}
+
+nav ul li a:hover {
+  color: #3b82f6; /* hover:text-blue-500 */
+}
+
+nav .flex {
+  display: flex;
+  align-items: center; /* items-center */
+  gap: 1rem; /* space-x-4 */
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button .h-6 {
+  width: 1.5rem; /* h-6 */
+  height: 1.5rem; /* w-6 */
+}
+
+button .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hidden {
+  display: none; /* hidden */
+}
+
+.md\\:inline-block {
+  display: inline-block; /* md:inline-block */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* text-sm */
+}
+
+.font-medium {
+  font-weight: 500; /* font-medium */
+}
