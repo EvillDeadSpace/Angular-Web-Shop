@@ -1,0 +1,33 @@
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  display: flex;
+  align-items: center; /* Poravnava sliku i tekst vertikalno u sredinu */
+  gap: 8px; /* Razmak između slike i teksta */
+  background: none; /* Opcionalno: uklanja pozadinu dugmeta */
+  border: none; /* Opcionalno: uklanja ivicu dugmeta */
+  padding: 8px 16px; /* Opcionalno: dodaje razmak unutar dugmeta */
+}
+button:hover {
+  background-color: #f0f0f0;
+}
+
+p {
+  margin: 0;
+  color: black;
+}
+
+button svg {
+  width: 24px;
+  height: 24px;
+  fill: black; /* Možete promeniti boju SVG-a */
+}

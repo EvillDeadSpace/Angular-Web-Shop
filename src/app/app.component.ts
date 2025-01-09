@@ -6,22 +6,18 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegistrationComponent } from './components/auth/registration/registration.component';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    ButtonModule,
-    NavigationComponent,
-    RegistrationComponent,
-    CommonModule,
-  ],
+  imports: [RouterOutlet, ButtonModule, NavigationComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  providers: [],
 })
 export class AppComponent {
   constructor(private router: Router) {}
   shouldShowLayout(): boolean {
-    const excludedRoutes = ['/', '/registration', '/login'];
+    const excludedRoutes = ['/', '/register', '/login'];
     return !excludedRoutes.includes(this.router.url);
   }
 

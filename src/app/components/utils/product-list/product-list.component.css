@@ -1,0 +1,42 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next line if there are too many cards */
+  gap: 16px; /* Adjust the gap between cards as needed */
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  width: 200px;
+  padding: 16px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column; /* Ensure the content inside the card is stacked vertically */
+}
+
+.product-card img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  color: #333;
+}
+
+ul {
+  margin-left: -16px;
+  margin-right: 15px;
+}
