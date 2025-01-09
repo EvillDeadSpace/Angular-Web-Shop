@@ -15,16 +15,21 @@ import { HttpClient } from '@angular/common/http';
 export class AdminPanelComponent implements OnInit {
   products: { id: number; product_name: string; price: number }[] = []; // Sadrži proizvode
   product = { product_name: '', image_url: '', price: 0 }; // Model za produkt koji će biti dodan
+  purchases: {
+    username: string;
+    product_name: string;
+    purchase_date: string;
+  }[] = []; // Sadrži kupovine
+
   constructor(
     private http: HttpClient,
     private productService: ProductService,
     private globalServices: GlobalService
-  ) {
-    console.log(this.globalServices.apiUrl);
-  }
+  ) {}
 
   ngOnInit() {
     this.loadProducts();
+    this.loadPurchases();
   }
 
   loadProducts() {
@@ -52,12 +57,28 @@ export class AdminPanelComponent implements OnInit {
     this.productService.addProduct(productData).subscribe(
       (response) => {
         console.log('Product added successfully:', response);
-        this.loadProducts(); // Osvježava listu proizvoda
-        // Resetiranje forme nakon uspješnog dodavanja
+        this.loadProducts();
         this.product = { product_name: '', image_url: '', price: 0 };
       },
       (error) => {
         console.error('Error adding product:', error);
+      }
+    );
+  }
+
+  loadPurchases() {
+    this.productService.getAllPurchases().subscribe(
+      (data) => {
+        console.log('Purchases data received:', data); // Debug log
+        this.purchases = data.map((purchase) => ({
+          username: purchase.username,
+          product_name: purchase.product_name,
+          purchase_date: purchase.purchase_date,
+        }));
+        console.log('Mapped purchases:', this.purchases); // Debug log
+      },
+      (error) => {
+        console.error('Error loading purchases:', error);
       }
     );
   }
@@ -76,7 +97,6 @@ export class AdminPanelComponent implements OnInit {
       .subscribe({
         next: (response: any) => {
           console.log('Product deleted successfully', response);
-          // Uklonite proizvod iz lokalne liste proizvoda
           this.products = this.products.filter(
             (product) => product.id !== productId
           );

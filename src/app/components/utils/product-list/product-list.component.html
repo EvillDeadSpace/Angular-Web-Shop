@@ -5,7 +5,9 @@
         <img [src]="product.image_url" alt="{{ product.product_name }}" />
         <h2>{{ product.product_name }}</h2>
         <p>Price: ${{ product.price }}</p>
-        <button>Buy products</button>
+        <button (click)="purchaseProduct(product.product_name)">
+          Buy products
+        </button>
       </li>
     </ul>
   </div>

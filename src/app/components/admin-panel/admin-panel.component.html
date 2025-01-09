@@ -142,5 +142,27 @@
         </button>
       </form>
     </div>
+    <div>
+      <h1 style="color: black">All Purchases</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Product Name</th>
+            <th>Purchase Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let purchase of purchases">
+            <td>{{ purchase.username }}</td>
+            <td>{{ purchase.product_name }}</td>
+            <td>{{ purchase.purchase_date }}</td>
+          </tr>
+          <tr *ngIf="purchases.length === 0">
+            <td colspan="3">No purchases available</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </main>
 </div>

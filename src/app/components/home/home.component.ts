@@ -11,9 +11,7 @@ import { GlobalService } from '../utils/services/global/global-variable.service'
 export class HomeComponent {
   username: string | null = null;
 
-  constructor(private globalService: GlobalService) {
-    console.log(this.globalService.apiUrl);
-  }
+  constructor(private globalService: GlobalService) {}
 
   ngOnInit(): void {
     this.username = this.globalService.username;

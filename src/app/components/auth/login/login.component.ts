@@ -33,10 +33,6 @@ export class LoginComponent {
   };
 
   onSubmit(): void {
-    console.log('Email:', this.email);
-    console.log('Password:', this.password);
-    console.log(this.userLogin);
-
     this.http
       .post('http://localhost/api/login.php', this.userLogin, {
         headers: { 'Content-Type': 'application/json' },
