@@ -18,13 +18,10 @@ export class DropdownMenuComponent {
   goToProfile() {
     console.log('Navigating to Profile Settings');
     this.r.navigate(['/settings']);
-    ``;
-    // Implement navigation logic ovdje
   }
 
   logout() {
     this.r.navigate(['/login']);
     console.log('Logging out');
-    // Implement logout logic ovdje
   }
 }
