@@ -4,7 +4,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router, RouterLink } from '@angular/router';
-
+import { GlobalService } from '../../utils/services/global/global-variable.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,7 +18,11 @@ import { Router, RouterLink } from '@angular/router';
   ],
 })
 export class LoginComponent {
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private globalService: GlobalService
+  ) {}
 
   email: string = '';
   password: string = '';
@@ -41,6 +45,8 @@ export class LoginComponent {
         next: (Response: any) => {
           if (Response.status === 'success') {
             console.log('Login successful', Response);
+            this.globalService.username = Response.user.username;
+            console.log('Global username:', this.globalService.username);
             this.router.navigate(['/home']);
           } else {
             console.error('Login failed', Response);

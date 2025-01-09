@@ -1,0 +1,16 @@
+<div class="product-list">
+  <div *ngFor="let product of products" class="product-card">
+    <ul class="bogmajku">
+      <li>
+        <img [src]="product.image_url" alt="{{ product.product_name }}" />
+        <h2>{{ product.product_name }}</h2>
+        <p>Price: ${{ product.price }}</p>
+        <button>Buy products</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<ng-template #noProducts>
+  <p>No products available.</p>
+</ng-template>
