@@ -40,6 +40,11 @@ Welcome to my **Angular 19** project! This web application is built with **Angul
 
 ## 📦 Features in Progress
 
-- **📅 Additional features for user data management
-- **📈 Advanced analytics dashboard for performance tracking
-- **💬 Real-time chat integration
+- 📅 Additional features for user data management
+- 📈 Advanced analytics dashboard for performance tracking
+- 📈 Admin Panel
+
+
+## ⚡️ Contributing
+
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request.
