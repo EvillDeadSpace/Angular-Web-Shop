@@ -35,4 +35,4 @@ Welcome to my **Angular 19** project! This web application is built with **Angul
 
 1. **Clone the repository**
    ```bash
-   [git clone https://github.com/your-username/your-repo-name.git](https://github.com/EvillDeadSpace/Angular-Web-Shop.git)
+   [(https://github.com/EvillDeadSpace/Angular-Web-Shop.git)](https://github.com/EvillDeadSpace/Angular-Web-Shop.git)]
