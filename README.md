@@ -36,3 +36,10 @@ Welcome to my **Angular 19** project! This web application is built with **Angul
 1. **Clone the repository**
    ```bash
    [(https://github.com/EvillDeadSpace/Angular-Web-Shop.git)](https://github.com/EvillDeadSpace/Angular-Web-Shop.git)]
+
+
+## 📦 Features in Progress
+
+- **📅 Additional features for user data management
+- **📈 Advanced analytics dashboard for performance tracking
+- **💬 Real-time chat integration
